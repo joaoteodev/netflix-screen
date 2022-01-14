@@ -72,11 +72,15 @@ function newProfile(event) {
   event.preventDefault()
 
   const nameProfile = document.querySelector('#name-profile')
-  const imageProfile = document.querySelector('#image-profile')
+  let imageProfile = document.querySelector('#image-profile')
 
   if (nameProfile.value && imageProfile.value) {
     modal.classList.add('hidden')
     document.body.classList.remove('overflow-hidden')
+  } else if (imageProfile.value == '') {
+    modal.classList.add('hidden')
+    document.body.classList.remove('overflow-hidden')
+    imageProfile = './img/default.jpeg'
   } else {
     return
   }
