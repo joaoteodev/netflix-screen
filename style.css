@@ -1,5 +1,4 @@
 * {
-  font-size: 16px;
   font-family: 'Roboto', sans-serif;
   color: #fff;
 
@@ -15,6 +14,7 @@
 body {
   position: relative;
   background: #141414;
+  font-size: 16px;
 }
 
 .header {
@@ -22,11 +22,17 @@ body {
   justify-content: center;
   padding: 2rem;
 
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
 }
 
 .logo {
   width: 10rem;
+}
+
+.main-container {
+  height: 80vh;
+  display: grid;
+  place-items: center;
 }
 
 .container {
@@ -253,4 +259,30 @@ body {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+  * {
+    font-size: 14px;
+  }
+
+  .profile-button {
+    font-size: 1.2rem;
+    width: 15rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  * {
+    font-size: 12px;
+  }
+
+  .profile-button {
+    font-size: 1.2rem;
+    width: 15rem;
+    height: 3rem;
+  }
 }
